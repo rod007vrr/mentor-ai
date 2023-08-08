@@ -33,6 +33,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^10.1.0"
+		"@pinecone-database/pinecone": "^0.1.6",
+		"firebase": "^10.1.0",
+		"langchain": "^0.0.123",
+		"pdfjs-dist": "^3.9.179"
 	}
 }
