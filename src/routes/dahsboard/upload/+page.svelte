@@ -77,7 +77,7 @@
 	}
 </script>
 
-<h2 class="card-title">Upload a file to your repo</h2>
+<h2 class="card-title">Upload a file to your file repository</h2>
 
 <AuthCheck>
 	<form class="max-w-screen-md w-full">
@@ -96,7 +96,9 @@
 				<p>Uploading...</p>
 				<progress class="progress progress-info w-56 mt-6" />
 			{/if}
-			<button type="submit" class="btn">Submit file</button>
+			{#if uploading == UploadState.Complete}
+				<p>Upload complete!</p>
+			{/if}
 		</div>
 	</form>
 </AuthCheck>

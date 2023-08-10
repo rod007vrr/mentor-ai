@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AnimatedRoute from '$lib/components/AnimatedRoute.svelte';
-	import type { LayoutData } from './$types';
+	import type { LayoutData } from '../../upload/$types';
 </script>
 
 <AnimatedRoute>
