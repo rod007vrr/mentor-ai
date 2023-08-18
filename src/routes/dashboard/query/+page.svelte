@@ -10,11 +10,17 @@
 </script>
 
 <h2 class="card-title">Pick a topic to query your docs for</h2>
+<p>
+  Please select a document and input a topic you would like study questions
+  generated for
+</p>
 
 <AuthCheck>
   <form class="max-w-screen-md w-full" method="POST">
     <div class="form-control w-full max-w-xs my-10 mx-auto text-center">
+      <p>enter topic</p>
       <input name="queryTopic" type="text" class="input" />
+      <p>pick notes</p>
       <select name="file">
         {#if $userData}
           {#each $userData.files as file}

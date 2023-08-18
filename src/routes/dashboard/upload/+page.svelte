@@ -83,6 +83,7 @@
 </script>
 
 <h2 class="card-title">Upload a file to your file repository</h2>
+<p>The file should be in the form of a pdf with your typed notes</p>
 
 <AuthCheck>
   <form class="max-w-screen-md w-full">

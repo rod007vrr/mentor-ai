@@ -1,5 +1,5 @@
-<h1 class="text-green-400">Homepage</h1>
+<h1 class="text-green-400">WELCOME TO MENTOR AI</h1>
 <p>
-  welcome to mentor ai, upload files in the upload tab and then query them with
-  a topic you want study questions for in the get questions tab
+  Mentor AI is a website where you can upload your typed pdf class notes, and
+  then get study questions for a particular topic based on your notes
 </p>
