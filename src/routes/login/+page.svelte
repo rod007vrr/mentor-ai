@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
   import { auth, user } from "$lib/firebase";
   import { redirect } from "@sveltejs/kit";
   import { GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
@@ -7,7 +8,7 @@
     const provider = new GoogleAuthProvider();
     const user = await signInWithPopup(auth, provider);
     console.log(user);
-    redirect(300, "/login/username");
+    goto("/login/username");
   }
 </script>
 

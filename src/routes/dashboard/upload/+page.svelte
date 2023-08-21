@@ -39,6 +39,11 @@
       },
     });
 
+    if (response.status !== 200) {
+      uploading = UploadState.Error;
+      return;
+    }
+
     const { filename } = await response.json();
     console.log(`succesfully uploaded ${filename}`);
 
@@ -104,6 +109,11 @@
       {/if}
       {#if uploading == UploadState.Complete}
         <p>Upload complete!</p>
+      {/if}
+      {#if uploading == UploadState.Error}
+        <p class="bg-red-500">Upload failed</p>
+        <p class="bg-red-500">File too large</p>
+        <p class="bg-red-500">Please contact support at rod007vrr@gmail.com</p>
       {/if}
     </div>
   </form>

@@ -8,10 +8,14 @@ export async function POST(requestEvent) {
   const { request } = requestEvent;
   const body = await request.json();
   const { text, filename, uid } = body;
+  try {
+    await uploadTextToPinecone(text, filename, uid);
 
-  await uploadTextToPinecone(text, filename, uid);
-
-  return json({ filename }, { status: 201 });
+    return json({ filename }, { status: 201 });
+  } catch (e) {
+    console.log(e);
+    return json({ error: e }, { status: 500 });
+  }
 }
 
 async function uploadTextToPinecone(
@@ -24,7 +28,6 @@ async function uploadTextToPinecone(
     chunkOverlap: 200,
   });
   const docs = await textSplitter.splitText(text);
-  console.log(OPENAI_API_KEY, "should be key");
   const embeddings = new OpenAIEmbeddings({
     openAIApiKey: OPENAI_API_KEY,
   });
